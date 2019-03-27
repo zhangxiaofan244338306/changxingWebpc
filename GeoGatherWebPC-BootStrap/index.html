@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<!--IE 兼容模式-->
+		<meta name="renderer" content="webkit">
+		<!--高速模式渲染页面-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>模板</title>
+		<link rel="stylesheet" href="plugins/bootstrap-3.3.7/css/bootstrap.min.css" />
+		<link rel="stylesheet/less" type="text/css" href="css/app.less">
+		<link rel="stylesheet" href="css/app.css" />
+		<link rel="stylesheet" href="plugins/shutter/css/shutter.css" />
+	</head>
+
+	<body>
+		<div class="container-fluid">
+			<div id="main" class="row">
+				<div class="shutter">
+					<div class="shutter-img">
+						<a href="#" data-shutter-title="Iron Man"><img src="imgs/shutter_1.jpg" alt="#"></a>
+						<a href="#" data-shutter-title="Super Man"><img src="imgs/shutter_2.jpg" alt="#"></a>
+						<a href="#" data-shutter-title="The Hulk"><img src="imgs/shutter_3.jpg" alt="#"></a>
+						<a href="#" data-shutter-title="The your"><img src="imgs/shutter_4.jpg" alt="#"></a>
+					</div>
+					<ul class="shutter-btn">
+						<li class="prev"></li>
+						<li class="next"></li>
+					</ul>
+					<!--注釋描述部分-->
+					<!--<div class="shutter-desc">
+						<p>Iron Man</p>
+					</div>-->
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/less.min.js"></script>
+
+</html>
+<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+<script type="text/javascript" src="plugins/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="plugins/shutter/js/shutter.js"></script>
+<script type="text/javascript" src="plugins/shutter/js/velocity.js"></script>
+<script>
+	$(function() {
+		$('.shutter').shutter({
+			shutterW: $('.shutter').outerWidth(), // 容器宽度
+			shutterH: $('.shutter').outerHeight(), // 容器高度
+			isAutoPlay: true, // 是否自动播放
+			playInterval: 2000, // 自动播放时间
+			curDisplay: 3, // 当前显示页
+			fullPage: false // 是否全屏展示
+		});
+	});
+</script>

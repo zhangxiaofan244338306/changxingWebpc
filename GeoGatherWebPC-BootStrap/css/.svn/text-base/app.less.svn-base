@@ -1,0 +1,13 @@
+        @height: ~`window.innerHeight + "px"`;
+
+
+        body{
+            height:@height;
+        }
+        
+        
+        
+        #main{
+            height:@height;
+        }
+        
